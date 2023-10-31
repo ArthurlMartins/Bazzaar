@@ -44,6 +44,20 @@ const bodyStyle = StyleSheet.create({
          justifyContent: "center",
          alignItems: "center",
      },  
+     tabStyle: {
+        height: hp('10%'),
+        backgroundColor: '#303030',
+        alignItems: "center"
+        
+     },
+     icone: {
+        justifyContent: "center",
+        alignContent: "center",
+     }, 
+     tabText: {
+        fontSize: 18,
+        alignContent: "center",
+     },
 })
 
 export default bodyStyle

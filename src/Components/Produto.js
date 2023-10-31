@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import produtoStyle from "./ProdutoStyle";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default class Produto extends Component {
 
@@ -39,12 +40,10 @@ export default class Produto extends Component {
                             <Text style={produtoStyle.textPrice}>{this.props.name}</Text>
                         </View>
                         <View style={produtoStyle.priceAreaBig}>
-                            <Text style={produtoStyle.textTecido}>Tecido: {this.props.tecido}</Text>
-                            <Text style={produtoStyle.textDesc}>{this.props.desc}</Text>
-                            <Text style={produtoStyle.textTecido}>Tipo: {this.props.tipo}</Text>
-                            <TouchableOpacity style={produtoStyle.buttonBuy}>
+                            <TouchableOpacity onPress={() => this.props.mudarTela(this.props.name, this.props.price, this.props.tecido, this.props.desc, this.props.tipo, this.props.path)} style={produtoStyle.buttonBuy}>
                                 <Text style={produtoStyle.textButton}>Comprar</Text>
                             </TouchableOpacity>
+                            <Text style={produtoStyle.textDesc}>{this.props.desc}</Text>
                         </View>
                     </View>
                     

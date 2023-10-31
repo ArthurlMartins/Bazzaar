@@ -29,7 +29,7 @@ const produtoStyle = StyleSheet.create({
         paddingLeft: 50,
 
         width: wp('70%'),
-        height: hp('40%'),
+        height: hp('30%'),
      },
      textTecido: {
          fontSize: 21,
